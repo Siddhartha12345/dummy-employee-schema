@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "title": "CommonEmployee",
+  "type": "object",
+  "description": "Base definition for an employee",
+  "examples": [
+    {
+      "id": "101",
+      "name": "Ashok Gupta",
+      "email": "ashok.gupta@infosys.com",
+      "phone": "9923411021",
+      "dateOfJoining": "2025-03-21",
+      "department": "HR",
+      "status": "ACTIVE"
+    }
+  ],
+  "required": [
+    "id",
+    "name",
+    "email"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "CommonEmployeeId",
+      "description": "Unique ID for the employee",
+      "examples": [
+        "101"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "title": "EmployeeName",
+      "description": "Name of the employee",
+      "examples": [
+        "Ashok Gupta"
+      ]
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "title": "EmployeeEmail",
+      "description": "Email of the employee",
+      "examples": [
+        "ashok.gupta@infosys.com"
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "title": "EmployeePhone",
+      "description": "Phone number of the employee",
+      "examples": [
+        "9923411021"
+      ]
+    },
+    "dateOfJoining": {
+      "type": "string",
+      "format": "date",
+      "title": "DateOfJoining",
+      "description": "Date of joining for the employee",
+      "examples": [
+        "2025-03-21"
+      ]
+    },
+    "department": {
+      "type": "string",
+      "title": "Department",
+      "description": "Department of the employee",
+      "examples": [
+        "HR"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "title": "EmployeeStatus",
+      "description": "Status of the employee",
+      "examples": [
+        "ACTIVE"
+      ],
+      "$ref": "Status.json"
+    }
+  }
+}
